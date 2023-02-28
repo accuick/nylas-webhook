@@ -26,14 +26,14 @@ app.all("/", (request, response) => {
     if (request.method === "POST") {
         console.log('==========BODY DELTAS START==========');
         console.log(request.body);
-        console.log("parsed data");
-        console.log(JSON.parse(request.body));
+        // console.log("parsed data");
+        // console.log(JSON.parse(request.body));
         if (request.body.deltas[0].metadata) {
             for (const key in request.body.deltas[0].metadata) {
                 console.log(key + ": " + request.body.deltas[0].metadata[key])
             }
         }
-        console.log('==========BODY DELTAS START==========\n');
+        console.log('==========BODY DELTAS END==========\n');
     }
 
     response.status(200).end() // Responding is important
