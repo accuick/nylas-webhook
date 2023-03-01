@@ -25,7 +25,7 @@ app.all("/", (request, response) => {
 
     if (request.method === "POST") {
         console.log('==========BODY DELTAS START==========');
-        console.log(request.body);
+        console.log(JSON.stringify(request.body));
         // console.log("parsed data");
         // console.log(JSON.parse(request.body));
         if (request.body.deltas[0].metadata) {
